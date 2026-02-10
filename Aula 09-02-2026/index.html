@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trying JavaScript</title>
+<meta charset="UTF-8">
+<style>
+.box {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+p {
+text-align: center;
+}
+
+.imagem {
+
+}
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+
+<h1>My first JavaScript</h1>
+<p>Studying atributes with JavaScript</p>
+
+<div class="imagem">
+<img id="imagem" src="lamp-desligada.gif">
+</div>
+
+<p>
+<button type="button" onclick="luz(1)">Luz acesa</button>
+<button type="button" onclick="luz(0)">Luz Apagada</button>
+</p>
+
+</div>
+<script>
+function luz(estado) {
+var foto;
+
+if(estado == 0) {
+foto = 'lamp-desligada.gif';
+} else {
+foto = 'lamp-ligada.gif'
+}
+document.getElementById('imagem').src = foto;
+}
+</script>
+</body>
+</html>
